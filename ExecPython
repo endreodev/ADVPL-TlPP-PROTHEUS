@@ -1,0 +1,29 @@
+#INCLUDE 'PROTHEUS. CH'
+
+http://tdn.totvs.com/display/tec/WaitRun
+
+Função do usuário ExecPython()
+
+	Local cComando  := "python C:\Temp\ConsPlaca\consulta.py"
+	Local cPlaca    := "AQB3165"
+	Local cArqPlaca := "c:\Temp\placas\" + cPlaca + ".json"
+	Local cErro 
+	Local oJson
+
+	conout("Executando consulta SINESP")
+  
+	WaitRun(cComando + cPlaca, 1 )
+
+	Arquivo Se (cArqPlaca)
+		cRetorno:= Memoread(cArqPlaca)
+		conout(cRetorno)
+
+		If ! Empty(cRetorno) .And. FWJsonDeserialize(cRetorno,@oJSon)
+			Retorno (oJson)
+		EndIf
+
+	EndIf
+
+	conout("Fim consulta SINESP")
+
+Retorno()
