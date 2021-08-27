@@ -70,11 +70,11 @@ User Function ENDFWEXCEL()
                 //Converte retorno Json String pra Objeto
                 oResult:FromJson(cResult)
 
-                //Faz um 
-                For nX:= 1 to Len(oResult['dados'])
-
-                    VarInfo('id' , oResult['dados'][nX]['id'])
-                    VarInfo('id' , oResult['dados'][nX]['nome'])
+                //Faz um for e recupera cada linha 
+                For nX:= 1 to Len(oResult['id'])
+            
+                    VarInfo('id'   , oResult['id'][nX]   )
+                    VarInfo('nome' , oResult['nome'][nX] )
                 
                 Next nX
 
