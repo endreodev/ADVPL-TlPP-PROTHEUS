@@ -34,4 +34,8 @@ WS em execução
 ![image](https://user-images.githubusercontent.com/15915765/131142962-7cc6b654-f90d-439f-a82a-4fb4c17873ad.png)
 
 
+Exemplo no postmam como seria para realizar o teste 
+![image](https://user-images.githubusercontent.com/15915765/131334870-c7cbcc3e-5037-4002-aa42-5b3b957d34f3.png)
 
+Com exemplo HTTP
+![image](https://user-images.githubusercontent.com/15915765/131334882-a457d49e-2938-45a1-a0fe-24b0bd598227.png)
