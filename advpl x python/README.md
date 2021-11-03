@@ -18,12 +18,16 @@ Necessário Criar uma pasta nomeada 'upload' no mesmo diretorio do arquivo WSPYT
 Importes necessarios para rodar.
 * pandas
 pip install pandas
+
 * Flask
 pip install flask
+
 *openpyxl
 pip install openpyxl
+
 *csv
 pip install csv
+
 *werkzeug
 pip install werkzeug
 
