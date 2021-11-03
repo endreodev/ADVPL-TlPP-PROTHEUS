@@ -24,7 +24,7 @@ User Function ENDFWEXCEL()
     Local nX
 
     //Abre caixa de seleção de arquivos para escolha de arquivos a serem enviados
-    cGetDir := tFileDialog( "All files (*.*) | All Text files (*.txt) ",'Selecao de Arquivos',, tmp, .F., GETF_MULTISELECT )
+    cGetDir := tFileDialog( '*.xlsx | Execel (xlsx)','Selecao de Arquivos',, tmp, .F., GETF_MULTISELECT )
     
     //Classe de auxilo de leitura de arquivo texto,por linhas.
     //Lê sempre um buffer fixo, permitindo leitura de linha sem honerar o IO.
