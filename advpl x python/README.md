@@ -22,13 +22,13 @@ pip install pandas
 * Flask
 pip install flask
 
-*openpyxl
+* openpyxl
 pip install openpyxl
 
-*csv
+* csv
 pip install csv
 
-*werkzeug
+* werkzeug
 pip install werkzeug
 
 Arquivo original sera mantido e o csv sera gravado com mesma nomeclatura
