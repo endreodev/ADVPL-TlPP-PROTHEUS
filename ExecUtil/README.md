@@ -19,4 +19,4 @@ Salva Login
 
 Executa Funções Customisadas e Padroes
 Para customisadas use U_funcao se tiver parametro coloque entre parenteses U_funcao('nome','masculino')
-![image](https://user-images.githubusercontent.com/15915765/144045894-16abfe29-d0e4-49c6-98eb-e35d25222b50.png)
+![image](https://user-images.githubusercontent.com/15915765/144048577-87d0e8ec-cf76-4d8b-b6a1-0542d0dad3cf.png)
