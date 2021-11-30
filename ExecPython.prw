@@ -2,7 +2,7 @@
 
 http://tdn.totvs.com/display/tec/WaitRun
 
-Função do usuário ExecPython()
+User Function ExecPython()
 
 	Local cComando  := "python C:\Temp\ConsPlaca\consulta.py"
 	Local cPlaca    := "AQB3165"
@@ -14,7 +14,7 @@ Função do usuário ExecPython()
   
 	WaitRun(cComando + cPlaca, 1 )
 
-	Arquivo Se (cArqPlaca)
+	If  File(cArqPlaca)
 		cRetorno:= Memoread(cArqPlaca)
 		conout(cRetorno)
 
@@ -26,4 +26,4 @@ Função do usuário ExecPython()
 
 	conout("Fim consulta SINESP")
 
-Retorno()
+Return
