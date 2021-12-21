@@ -12,6 +12,9 @@ UMA UNICA VEZ.
 Fiquem a vontade para contribuir.
 
 
-
+# RestStartOn.tlpp
+Desenvolvido para corrigir a pausa do Rest, ao ultizar o rest foi identificado que 
+se ficar sem requisições por determinado tempo, em sua promeira requisição demora 
+responder. Feito Job para realizar requisições e permanecer ativo.
 
 
