@@ -1,0 +1,73 @@
+#INCLUDE "TOTVS.CH"
+
+/*/{Protheus.doc} RestStartOn
+Job para ativação de ws Rest
+//Job que realiza ativação de Thread no Rest
+@type function
+@version 1.0.0
+@author Endreo Figueiredo
+@since 09/11/2021
+
+//Configuração
+[ONSTART]
+JOBS=HTTPJOB, MONITORWS
+REFRESHRATE=10
+
+[MONITORWS]
+MAIN=U_RestStartOn
+ENVIRONMENT=TESTE005
+nParms=2
+Parm1=01 //Empresa 
+Parm2=01 //Filial 
+/*/
+
+User Function RestStartOn(cEmp,cFil)
+
+    Local nSeconds      := Seconds()
+	Local lContinua     := .T.
+	Local cHoraIni      := SubsTr(Time(),1,2)
+    Local oRestOn       := Nil
+    Local aHeader       := {}
+    Local cJson         := ''
+
+    Default cEmp     	:= "01"
+	Default cFil     	:= "01"
+
+	If ! Empty(cEmp)
+		RPCSetType(3)  // Nao comer licensa
+		RPCSetEnv(cEmp,cFil,,,"FIN")
+	EndIf
+
+	While lContinua
+
+        nSeconds := Seconds()
+        oRestOn := FWRest():New('http://localhost:5890/rest')
+
+        oRestOn:SetPath("/healthcheck") 
+        oRestOn:Get(aHeader)
+
+        If ValType(oRestOn) == "O" 
+		
+        	VarInfo('SERVICO EM OPERACAO' , oRestOn )
+            
+            cJson := oRestOn:GetResult()
+
+            VarInfo("json: " , cJson )
+            VarInfo("-----------------------------------------------------------")
+            VarInfo("Tempo MS",Seconds()-nSeconds)
+            VarInfo("-----------------------------------------------------------")
+		
+        Else
+			VarInfo(oRestOn:GetLastError() , " Sem conexo com WS " )
+		EndIf
+
+		lContinua := (cHoraIni == SubsTr(Time(),1,2))
+
+        oRestOn := Nil
+
+		Sleep(30000)
+	EndDo
+
+    RpcClearEnv()
+
+Return 
