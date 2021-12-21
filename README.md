@@ -6,6 +6,9 @@ Ferramentas para facilitar o dia a dia de um desenvolvedor.
 Ferramenta que permite executar funções customisadas de forma rapida, permite salvar login e executar consulta F3 etc.
 Tambem suporta execução de rotinas MVC.
 
+# advpl x python
+Projeto de integraçaõ ADVPL com Python realizando conversão de arquivos XSLX para CSV ou Json.
+
 # RETORLIBERACAO 
 ESTORNA LIBERAÇÃO DE PEDIDOS DE COMPRA DE VARIOS PEDIDOS DE 
 UMA UNICA VEZ.
