@@ -1,5 +1,13 @@
 #INCLUDE 'TOTVS.CH'
 
+/*/{Protheus.doc} EFObjToJson
+Cria json para envio a WebService 
+@type function
+@version  1
+@author Endreo Figueiredo
+@since 01/02/2022
+/*/
+
 User Function EFObjToJson()
 
 
@@ -9,26 +17,36 @@ User Function EFObjToJson()
     Local cJson AS Character
     Local cRet  AS Character
 
-    oObj   := JsonObject():New()
+    //Classe para criar json
+    oObj   := JsonObject():New() 
+
+    //Classe para criar identar string json
     oOPret := EFJsonPrettify():New()
 
     cJson := ''
     cRet  := ''
 
-    oObj['PAIS'] :=  'BRASIL'
+    oObj['PAIS'] :=  'BRASIL' //Cria propriedade pais no json
 
-    oObj['CARROS'] := {}
+    oObj['CARROS'] := {}  //Cria propriedade array com carros no json
     AAdd( oObj['CARROS'],'GOL')
     AAdd( oObj['CARROS'],'FUSCA')
     AAdd( oObj['CARROS'],'BRASILIA')
 
-    oObj['ANOS'] := {}
+    oObj['ANOS'] := {} //Cria propriedade array com anos no json
     AAdd( oObj['ANOS'],'1989')
     AAdd( oObj['ANOS'],'1974')
     AAdd( oObj['ANOS'],'1837')
-
+    
+    //Converte Objeto json para string 
+    //por questões de performace aconcelhavel a enviar 
+    //desta forma pra os serviços de web service.
     cJson := oObj:ToJson()
 
+    //Para identar a string json podemos ultilizar o metodo 
+    //Convert da Classe EFJsonPrettify
     cRet := oOPret:Convert(cJson)
+
+    Fwalert(cRet,'jSon')// Mostra String Json identado.
 
 Return
