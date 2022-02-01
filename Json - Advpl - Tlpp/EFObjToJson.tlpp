@@ -1,0 +1,34 @@
+#INCLUDE 'TOTVS.CH'
+
+User Function EFObjToJson()
+
+
+    Local oObj    AS JsonObject
+    Local oOPret  AS JsonObject
+    
+    Local cJson AS Character
+    Local cRet  AS Character
+
+    oObj   := JsonObject():New()
+    oOPret := EFJsonPrettify():New()
+
+    cJson := ''
+    cRet  := ''
+
+    oObj['PAIS'] :=  'BRASIL'
+
+    oObj['CARROS'] := {}
+    AAdd( oObj['CARROS'],'GOL')
+    AAdd( oObj['CARROS'],'FUSCA')
+    AAdd( oObj['CARROS'],'BRASILIA')
+
+    oObj['ANOS'] := {}
+    AAdd( oObj['ANOS'],'1989')
+    AAdd( oObj['ANOS'],'1974')
+    AAdd( oObj['ANOS'],'1837')
+
+    cJson := oObj:ToJson()
+
+    cRet := oOPret:Convert(cJson)
+
+Return

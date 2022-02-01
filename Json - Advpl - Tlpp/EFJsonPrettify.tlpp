@@ -1,0 +1,90 @@
+#INCLUDE 'TOTVS.CH'
+
+#DEFINE CHR_BS    chr(8)
+#DEFINE CHR_HT    chr(9)
+#DEFINE CHR_LF    chr(10)
+#DEFINE CHR_VT    chr(11)
+#DEFINE CHR_FF    chr(12)
+#DEFINE CHR_CR    chr(13)
+#DEFINE CRLF      chr(13)+chr(10)
+
+Class EFJsonPrettify
+
+    Data cJson
+    Data cNewJsn
+
+    Public Method New()
+    Public Method Convert(cJson)
+
+EndClass 
+
+Method New() Class EFJsonPrettify
+
+    ::cJson   := ''
+    ::cNewJsn := ''
+Return 
+
+Method Convert(cJson) Class EFJsonPrettify
+
+    Local nConta, cBefore, cTab
+	Local cLetra    := ""
+	Local lInString := .F.
+	Local nIdentLev := 0
+
+	Default nTab := -1
+
+    ::cJson   := cJson
+
+	if nTab > 0
+		cTab := REPLICATE(" ", nTab)
+	else
+	    cTab := CHR_HT
+	endif
+		
+	For nConta:= 1 To Len(::cJson)
+	
+		cBefore := cLetra
+		cLetra := SubStr(::cJson, nConta, 1)		
+		
+		if cLetra == "{" .or. cLetra == "["
+			if !lInString
+				nIdentLev++
+				::cNewJsn += cLetra + CRLF + REPLICATE( cTab, nIdentLev)
+			else
+				::cNewJsn += cLetra
+			endif
+		elseif cLetra == "}" .or. cLetra == "]"
+			if !lInString
+				nIdentLev--
+				::cNewJsn += CRLF + REPLICATE(cTab, nIdentLev) + cLetra
+			else
+				::cNewJsn += cLetra
+			endif
+		elseif cLetra == ","
+	   		if !lInString
+				::cNewJsn += cLetra + CRLF + REPLICATE(cTab, nIdentLev)
+			else
+				::cNewJsn += cLetra
+			endif
+		elseif cLetra == ":"
+	   		if !lInString
+				::cNewJsn += ": "
+			else
+				::cNewJsn += cLetra
+			endif
+		elseif cLetra == " " .or. cLetra == CHR_LF .or. cLetra == CHR_HT
+			if lInString
+				::cNewJsn += cLetra
+			endif
+		elseif cLetra == '"'
+	   		if cBefore != "\"
+				lInString := !lInString
+			endif
+			::cNewJsn += cLetra
+		else
+			::cNewJsn += cLetra
+		endif
+	Next
+
+Return ::cNewJsn
+
