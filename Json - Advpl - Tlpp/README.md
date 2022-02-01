@@ -6,10 +6,10 @@ Cria um json e converte pra string Json;
 
 
 EFJsonPrettify.tlpp
-Converte string minificada para formato identado.
+Converte string mimificada para formato indentado.
 
 
-A classe EFJsonPrettify foi criada com base no artigo 
+A classe EFJsonPrettify foi criada com base no repositório:
 https://github.com/imsys/JSON-ADVPL
 
 ![image](https://user-images.githubusercontent.com/15915765/151973405-a69b4f33-e60f-4a82-8fd5-e2650d1212fd.png)
