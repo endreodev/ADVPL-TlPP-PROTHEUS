@@ -2,6 +2,9 @@
 Projeto voltado a tirar duvidas e ajudar com novas ferramentas desenvolvedores ADVPL
 Ferramentas para facilitar o dia a dia de um desenvolvedor.
 
+# Json - Advpl - Tlpp
+Cria objecto json com Classe JsonObject e converte pra string Json com a 
+
 # ExecUtil 
 Ferramenta que permite executar funções customisadas de forma rapida, permite salvar login e executar consulta F3 etc.
 Tambem suporta execução de rotinas MVC.
