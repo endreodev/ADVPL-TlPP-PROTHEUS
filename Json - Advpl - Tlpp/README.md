@@ -6,7 +6,7 @@ Cria um json e converte pra string Json;
 
 
 EFJsonPrettify.tlpp
-Converte string mimificada para formato indentado.
+Converte string mimificada para formato organizar.
 
 
 A classe EFJsonPrettify foi criada com base no repositório:
