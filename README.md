@@ -21,10 +21,10 @@ Ponto de entrada MVC incluindo e auterando ordem de campos.
 
 Fiquem a vontade para contribuir.
 
-
 # RestStartOn.tlpp
 Desenvolvido para corrigir a pausa do Rest, ao ultizar o rest foi identificado que 
 se ficar sem requisições por determinado tempo, em sua promeira requisição demora 
 responder. Feito Job para realizar requisições e permanecer ativo.
 
-
+# EFCsvLeitura.prw
+Função pra leitura de arquivos CSV retorna array com todas as linhas
