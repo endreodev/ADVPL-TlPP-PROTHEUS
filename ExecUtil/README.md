@@ -20,7 +20,14 @@ Para customisadas use U_funcao se tiver parametro coloque entre parenteses U_fun
 ![image](https://user-images.githubusercontent.com/15915765/144045894-16abfe29-d0e4-49c6-98eb-e35d25222b50.png)
 
 
+
+
+
+
+
+
 Englis.
+
 #EXECUTIL 
 Must be called via SmartClient or via VSCode, it allows saving the username and password to quickly execute the login in the system.
 
