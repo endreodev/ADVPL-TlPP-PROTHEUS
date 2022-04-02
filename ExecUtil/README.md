@@ -1,6 +1,9 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 PT-BR
+
 #EXECUTIL 
+
 Deve ser chamada via SmartClient ou através do VSCode, permite salvar o usuário e senha para executar rapidamente o login no sistema.
 
 Permite executar rotinas padrões e customizadas. 
@@ -29,6 +32,7 @@ Para customisadas use U_funcao se tiver parametro coloque entre parenteses U_fun
 Englis.
 
 #EXECUTIL 
+
 Must be called via SmartClient or via VSCode, it allows saving the username and password to quickly execute the login in the system.
 
 Allows you to run standard and custom routines.
