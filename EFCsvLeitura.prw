@@ -21,7 +21,7 @@ User Function EFCsvLeitura()
 
         //Faz a abertuta do arquivo 
          If (oFile:Open())
-            //Transformas linhas em array
+            //Retorna todas as linha como array 
             aLine   := oFile:getAllLines()
 
             //Fecha arquivo 
