@@ -1,0 +1,39 @@
+{
+	"configurations": [
+		{
+			"name": "Advpl Debug",
+			"type": "advpl",
+			"request": "launch",
+			"args": [],
+			"cwd": "",
+			"programRun": "${command:AskForProgramName}",
+			"stopOnEntry": false,
+			"enviromentInfo": "${command:GetEnvInfos}",
+			"workspace": "${workspaceFolder}/"
+		}
+	
+	]
+} // {
+// 	"version": "0.2.0",
+// 	"configurations": [
+// 		{
+// 			"type": "totvs_language_debug",
+// 			"request": "launch",
+// 			"name": "TOTVS Language Debug",
+// 			"program": "${command:AskForProgramName}",
+// 			"cwb": "${workspaceFolder}",
+// 			"smartclientBin": "C:/TOTVS/Protheus/bin/smartclient_33/smartclient.exe",
+// 			"isMultiSession": true,
+// 			"enableTableSync": true
+// 		}
+// 	],
+// 	"lastPrograms": [
+// 		{
+// 			"label": "U_ExecUtil"
+// 		},
+// 		{
+// 			"label": "U_RunUtil"
+// 		}
+// 	],
+// 	"lastProgramExecuted": "U_RunUtil"
+// }
