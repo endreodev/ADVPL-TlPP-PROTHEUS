@@ -5,7 +5,8 @@ Cada pasta é sobre uma ferramenta.
 
 > ExecUtil
 ```
-Ferramenta que permite executar funções customisadas de forma rapida, permite salvar login e executar consulta F3 etc.
+Ferramenta que permite executar funções customisadas de forma rapida, 
+permite salvar login e executar consulta F3 etc.
 Tambem suporta execução de rotinas MVC.
 ```
 
