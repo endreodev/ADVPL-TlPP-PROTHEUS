@@ -1,24 +1,34 @@
 # ADVPL-PROTHEUS
-Projeto voltado a tirar duvidas e ajudar com novas ferramentas desenvolvedores ADVPL
+Projeto voltado a tirar duvidas e ajudar com novas ferramentas desenvolvedores ADVPL.
 Ferramentas para facilitar o dia a dia de um desenvolvedor.
+Cada pasta é sobre uma ferramenta.
 
-# Json - Advpl - Tlpp
-Cria objecto json com Classe JsonObject e converte pra string Json.
-Com a classe customizada EFJsonPrettify fazemos a organização da string.
-
-# ExecUtil 
+> ExecUtil
+```
 Ferramenta que permite executar funções customisadas de forma rapida, permite salvar login e executar consulta F3 etc.
 Tambem suporta execução de rotinas MVC.
+```
 
-# advpl x python
-Projeto de integraçaõ ADVPL com Python realizando conversão de arquivos XSLX para CSV ou Json.
+> Json - Advpl - Tlpp
+```
+Cria objecto json com Classe JsonObject e converte pra string Json.
+Com a classe customizada EFJsonPrettify fazemos a organização da string.
+```
 
-# RETORLIBERACAO 
+
+> advpl x python
+```
+Projeto de integração ADVPL com Python.
+```
+
+> RETORLIBERACAO 
+
 ESTORNA LIBERAÇÃO DE PEDIDOS DE COMPRA DE VARIOS PEDIDOS DE 
 UMA UNICA VEZ.
 
 # ExecPython 
 Exemplo executando Python via ADVPL 
+realizando conversão de arquivos XSLX para CSV ou Json.
 
 # PONTOENTRADAMVC
 Ponto de entrada MVC incluindo e auterando ordem de campos.
