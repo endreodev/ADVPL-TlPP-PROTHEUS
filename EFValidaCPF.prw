@@ -1,4 +1,12 @@
+/*
 
+Este script tem como entrada uma string contendo o número do CPF e retorna um valor booleano indicando se é válido ou não. 
+Ele verifica se o CPF tem 11 dígitos, se todos os dígitos são iguais, calcula os dígitos verificadores e compara-os com os dígitos do CPF passado como parâmetro.
+
+Observe que esta é uma implementação simplificada, e é recomendado usar biblioteca já testadas e validadas para essa finalidade.
+
+
+*/
 
 Function U_EFValidaCPF(cCPF)
 
